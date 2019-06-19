@@ -31,4 +31,15 @@ view: relate_jobs_to_products {
     type: count
     drill_fields: [id]
   }
+
+  measure: availabilityscoremeasure {
+    type: sum_distinct
+    sql: cast(${availability_score} as INT64) ;;
+  }
+
+  measure: availabilityscoreaverage {
+    type: average_distinct
+    sql: cast(${availability_score} as INT64) ;;
+  }
+
 }
