@@ -34,12 +34,12 @@ view: relate_jobs_to_products {
 
   measure: availabilityscoremeasure {
     type: sum_distinct
-    sql: cast(${availability_score} as INT64) ;;
+    sql: cast(${availability_score} as INT) ;;
   }
 
   measure: availabilityscoreaverage {
     type: average_distinct
-    sql: cast(${availability_score} as INT64) ;;
+    sql: cast(${availability_score} as INT) ;;
   }
 
 }
